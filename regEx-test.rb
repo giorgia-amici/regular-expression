@@ -38,4 +38,16 @@ animals = ['cat', 'bat', 'rat']
 animals.select{ |a| a[/[cbr]at/] }
 #['cat','bat','rat']
 
-[/[0123456789]+/].match('42')
+/[0123456789]+/.match('42')
+##<MatchData "42"> it will continue through the // till it will find both 4 and 2
+
+
+/\d+/.match('9876')
+#<MatchData "9876"> where /d/ refers to a digit character
+
+/\D+/.match('9876')
+#nil where /D/ refers to a non digit character
+
+
+/.ola/.match('caracola')
+#this is an example on how to use wildcards
